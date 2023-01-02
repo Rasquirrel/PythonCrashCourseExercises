@@ -1,0 +1,1 @@
+print("Amit Ray once said,'Looking at beauty in the world, is  the first step of purifying the mind.'")
