@@ -1,4 +1,5 @@
 dina = {
+    'name': 'dina',
     'type': 'cat',
     'fur_color': 'white with brown',
     'eyes_color': 'blue',
@@ -7,6 +8,7 @@ dina = {
 }
 
 newton = {
+    'name': 'newton',
     'type': 'cat',
     'fur_color': 'white and black',
     'eyes_color': 'yellow',
@@ -15,6 +17,7 @@ newton = {
 }
 
 xane = {
+    'name': 'xane',
     'type': 'cat',
     'fur_color': 'brown with white',
     'eyes_color': 'blue',
@@ -22,6 +25,21 @@ xane = {
     'race': 'mixed'
 }
 
-print(dina)
-print(xane)
-print(newton)
+pets = [dina, newton, xane]
+
+print("My pets: \n")
+
+for pet in pets:
+    pet_name = pet['name']
+    pet_type = pet['type']
+    fur_color = pet['fur_color']
+    eyes_color = pet['eyes_color']
+    size = pet['size']
+    race = pet['race']
+
+    print("\tName: " + pet_name.title() + ';')
+    print("\tType: " + pet_type + ';')
+    print("\tFur Color: " + fur_color + ';')
+    print("\tEyes Color: " + eyes_color + ';')
+    print("\tSize: " + size + ';')
+    print("\tRace: " + race + ';\n')
