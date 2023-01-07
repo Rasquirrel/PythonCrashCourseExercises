@@ -22,3 +22,17 @@ cities = {
     }
 }
 
+for citie, citie_info in cities.items():
+    print("\nCity Name: " + citie.title())
+
+    size = citie_info['size']
+    country = citie_info['country']
+    language = citie_info['language']
+    population = citie_info['population']
+    curiosity = citie_info['curiosity']
+
+    print("\tSize: " + size + ';')
+    print("\tCountry: " + country.title() + ';')
+    print("\tLanguage: " + language.title() + ';')
+    print("\tPopulation: " + str(population) + ';')
+    print("\tCuriosity: " + curiosity + '.\n')
