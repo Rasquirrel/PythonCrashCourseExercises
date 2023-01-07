@@ -1,31 +1,43 @@
-friends = {'emilly': {}}
-
-print(friends)
-print()
-
-friends['emilly'] = {
-    'first_name': 'emilly',
-    'second_name': 'nascimento',
-    'favorite_color1': 'yellow',
-    'favorite_color2': 'pink',
-    'characteristic': 'kind',
-    'age': 8,
-    'city': 'sobral',
-    'hair': 'wavy long',
-    'likes': 'play and eat candys'
+emilly = {
+    'first': 'emilly',
+    'last': 'do nascimento',
+    'color': 'yellow',
+    'likes': 'play and eat candys',
+    'location': 'sobral',
+    'age': 8
 }
 
-emilly = friends['emilly']
+isac = {
+    'first': 'josé',
+    'last': 'isac',
+    'color': 'gray',
+    'likes': 'study python and play with Emilly',
+    'location': 'sobral',
+    'age': 16
+}
 
-print("My friend's first name is " + 
-      emilly['first_name'].title() + '!')
-print("And her first favorite color is: " +
-      emilly['favorite_color1'] + '.')
-print("And her second is: " +
-      emilly['favorite_color2'] + '.')
-print('I like the fact that she is very ' +
-      emilly['characteristic'] + '.')
-print('She is ' + str(emilly['age']) + '.')
-print('She lives in ' + emilly['city'] + '.')
-print('She has ' + emilly['hair'] + ' hair.')
-print('And she likes ' + emilly['likes'] + '.')
+sales = {
+    'first': 'gabriel',
+    'last': 'sales',
+    'color': 'black',
+    'likes': 'listen to music and be with his girlfriend',
+    'location': 'aracatiaçu',
+    'age': 17
+}
+
+friends = [emilly, isac, sales]
+
+print("These are some of my friends: ")
+
+for friend in friends:
+    full_name = friend['first'] + " " + friend['last']
+    color = friend['color']
+    likes = friend['likes']
+    location = friend['location']
+    age = friend['age']
+
+    print("\tFull name: " + full_name.title() + ";")
+    print("\tFavorite color: " + color + ";")
+    print("\tLikes: " + likes + ";")
+    print("\tLocation: " + location.title() + ";")
+    print("\tAge: " + str(age) + ".\n")
