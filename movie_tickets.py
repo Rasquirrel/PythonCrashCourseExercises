@@ -2,26 +2,33 @@
 price = 0
 
 while True:
-    age = int(input("Please enter your age: "))
+    age = (input("Please enter your age: \n" +
+    "(Enter 'quit' if you want to exit.)"))
 
-    if age < 3:
-        print("Because you have " + str(age) +
-        ", you dont have to pay.")
-        
+    if age == 'quit':
         break
-        
-    elif age > 3 and age < 12: 
-        price = 10
-        print("Because you have " + str(age) +
-        ", you have to pay: $" + str(price) + '.')
 
-        break
+    else:
+        age = int(age)
+    
+        if age < 3:
+            print("Because you have " + str(age) +
+            ", you dont have to pay.")
         
-    elif age > 12:
-        price = 15
-        print("Because you have " + str(age) +
-        ", you have to pay: $" + str(price) + '.')
+            break
+        
+        elif age > 3 and age < 12: 
+            price = 10
+            print("Because you have " + str(age) +
+            ", you have to pay: $" + str(price) + '.')
 
-        break
+            break
+        
+        elif age > 12:
+            price = 15
+            rint("Because you have " + str(age) +
+            ", you have to pay: $" + str(price) + '.')
+
+            break
 
 print("Enjoy!")
