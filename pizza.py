@@ -1,6 +1,8 @@
 def make_pizza(*toppings):
     """This function prints the list of topping that have been requested"""
-    print(toppings)
+    print("Making a pizza with the followind toppings: ")
+    for topping in toppings:
+        print('\t' + topping + ';')
 
 
 make_pizza('cheese')
