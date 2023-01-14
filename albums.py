@@ -1,4 +1,11 @@
-def make_album(title, artist, n_tracks=''):
+def make_album(title, artist, n_tracks: int = ''):
+    """
+    Makes a dictionary containing album infos
+    title = tilte name
+    artist = artist name
+    n_tracks = optional parameter, that stores the number of tracks that
+               the album have.
+    """
     album = {
         'title': title.title(),
         'artist': artist.title()
@@ -8,6 +15,7 @@ def make_album(title, artist, n_tracks=''):
         album['n_tracks'] = n_tracks
 
     return album
+
 
 album1 = make_album('pop', 'michael')
 album2 = make_album('eletro', 'psyqui')

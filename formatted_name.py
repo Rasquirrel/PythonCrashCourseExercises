@@ -10,6 +10,7 @@ def get_formatted_name(first, last, middle=''):
 
     return full_name.title()
 
+
 musician = get_formatted_name('Jimi', 'Hendrix')
 print(musician)
 
