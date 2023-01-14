@@ -19,9 +19,14 @@ class Restaurant:
 
 
 my_restaurant = Restaurant("isac cooks - restaurant", 'brazilian cuisine')
-
-print(my_restaurant.name)
-print(my_restaurant.cuisine_type)
+void_restaurant = Restaurant('void plateau', 'space cuisine')
+shing_shong_restaurant = Restaurant('kashjdqkw sjda', 'chinese cuisine')
 
 my_restaurant.describe_restaurant()
-my_restaurant.open_restaurant()
+print()
+
+void_restaurant.describe_restaurant()
+print()
+
+shing_shong_restaurant.describe_restaurant()
+print()
