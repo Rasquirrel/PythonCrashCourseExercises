@@ -1,5 +1,6 @@
 class Car:
     """A simple attempt to represent a car"""
+
     def __init__(self, make, model, year):
         """Initialize attributes to describe a car"""
         self.make = make
@@ -28,6 +29,7 @@ class Car:
         self.odometer_reading += miles
 
 
+'''
 my_new_car = Car('audi', 'a4', 2016)
 print(my_new_car.get_descriptive_name())
 my_new_car.read_odometer()
@@ -35,3 +37,16 @@ my_new_car.read_odometer()
 my_new_car.update_odometer(50)
 my_new_car.increment_odometer(100)
 my_new_car.read_odometer()
+'''
+
+
+class EletricCar(Car):
+    """Trying to create a Eletric Car who is Car's child"""
+
+    def __init__(self, make, model, year):
+        """Initialize atributes of the parent class"""
+        super().__init__(make, model, year)
+
+
+tesla = EletricCar('tesla', 'model s', 2016)
+print(tesla.get_descriptive_name())
