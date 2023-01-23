@@ -53,9 +53,16 @@ class Battery():
         message = "This car can go approximately " + str(range)
         message += " miles on a full charge."
         print(message)
+    
+    def upgrade_battery(self):
+        """Upgrades the battery to full charge"""
+        if self.battery_size != 85:
+            self.battery_size = 85
+        else:
+            pass
+
 
         
-
 class EletricCar(Car):
     """Trying to create a Eletric Car who is Car's child"""
 
@@ -71,10 +78,13 @@ class EletricCar(Car):
     def fill_gas_tank(self):
         """Eletric cars doesn't have a gas tank!"""
         print("This car doesn't need a gas tank!")
-
+    
 
 tesla = EletricCar('tesla', 'model s', 2016)
-print(tesla.get_descriptive_name())
 tesla.battery.describe_battery()
-tesla.fill_gas_tank()
+tesla.battery.get_range()
+
+tesla.battery.upgrade_battery()
+
+tesla.battery.describe_battery()
 tesla.battery.get_range()
