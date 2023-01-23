@@ -28,11 +28,15 @@ class IceCreamStand(Restaurant):
         Then initialize an attribute specif to the ice cream stand.
         """
         super().__init__(name, cuisine_type)
-        flavours = ['chocolate', 'coconut', 'orange', 'berry']
+        self.flavours = ['chocolate', 'coconut', 'orange', 'berry']
     
-    def show_flavours():
+    def show_flavours(self):
         """Prints all the avaliable flavours"""
-        print()
+        print("These are the avaliable flavours: ")
+        for flavour in self.flavours:
+            print('\t' + flavour.title())
 
 
+stand = IceCreamStand('IceCream', 'Brazillian Cuisine')
 
+stand.show_flavours()
