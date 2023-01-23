@@ -27,6 +27,10 @@ class Car:
     def increment_odometer(self, miles):
         """Add the given value to the odometer reading"""
         self.odometer_reading += miles
+    
+    def fill_gas_tank(self):
+        """Fill the gas tank"""
+        print('Filling the gas tank...')
 
 
 '''
@@ -59,3 +63,4 @@ class EletricCar(Car):
 tesla = EletricCar('tesla', 'model s', 2016)
 print(tesla.get_descriptive_name())
 print(tesla.describe_battery())
+print(tesla.fill_gas_tank())
