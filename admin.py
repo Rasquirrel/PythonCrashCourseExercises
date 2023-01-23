@@ -39,6 +39,17 @@ class User:
     def greet_user(self):
         print('Hello ' + self.full_name.title() + '! Nice to see you again!')
 
+class Privileges:
+    """Privileges of the admin"""
+    def __init__(self, privileges=['can add post', 'can remove post', 'can ban a user']):
+        self.privileges = privileges
+    
+    def show_privileges(self):
+        """Show admin's privileges"""
+        print("These are the admin's privileges: ")
+        for privilege in self.privileges:
+            print('\t ' + privilege.capitalize())
+ 
 
 class Admin(User):
     """Attempt to build a admin"""
@@ -46,16 +57,10 @@ class Admin(User):
     def __init__(self, first_name, last_name, middle_name='', **user_info):
         """Initialize atributes."""
         super().__init__(first_name, last_name, middle_name, **user_info)
-        self.privileges = ['can add post', 'can remove post', 'can ban a user',
-                            'can modify a user']
+        self.privileges = Privileges()
         self.is_admin = True
     
-    def show_privileges(self):
-        """Show admin's privileges"""
-        print("These are the admin's privileges: ")
-        for privilege in self.privileges:
-            print('\t ' + privilege.capitalize())
-    
+   
     def describe_user(self):
         """Prints all information about the admin"""
         print('These are the info about user: ' + self.full_name.title())
@@ -78,5 +83,5 @@ class Admin(User):
 
 administrator = Admin('Isac', 'Araujo', age=16, country='brazil', level=98)
 administrator.describe_user()
-administrator.show_privileges()
+administrator.privileges.show_privileges()
 administrator.greet_user()
