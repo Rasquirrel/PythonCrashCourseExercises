@@ -38,3 +38,41 @@ class User:
 
     def greet_user(self):
         print('Hello ' + self.full_name.title() + '! Nice to see you again!')
+
+
+user1 = User(
+            'isac',
+            'araujo',
+            age=16,
+            location='sobral',
+            fv_color='gray',
+            pet='cat',
+            pgm_language='python'
+            )
+
+user2 = User(
+            'emilly',
+            'nascimento',
+            'do',
+            fv_color='yellow',
+            age=8,
+            location='sobral',
+            likes='play and eat candy'
+            )
+
+user3 = User('john',
+             'doe',
+             fv_color='blue',
+             works='loremimpsilum dorem',
+             location='unknown'
+             )
+
+print('-' * 50)
+user1.describe_user()
+user1.greet_user()
+print()
+user2.describe_user()
+user2.greet_user()
+print()
+user3.describe_user()
+user3.greet_user()
