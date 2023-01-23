@@ -1,3 +1,4 @@
+"""A set of classes that can be used to represent a gas car and eletric car."""
 class Car:
     """A simple attempt to represent a car"""
 
@@ -32,7 +33,6 @@ class Car:
         """Fill the gas tank"""
         print('Filling the gas tank...')
 
-
 class Battery():
     """A simple attempt to model a battery for an eletric car."""
 
@@ -62,7 +62,6 @@ class Battery():
             pass
 
 
-        
 class EletricCar(Car):
     """Trying to create a Eletric Car who is Car's child"""
 
@@ -79,12 +78,3 @@ class EletricCar(Car):
         """Eletric cars doesn't have a gas tank!"""
         print("This car doesn't need a gas tank!")
     
-
-tesla = EletricCar('tesla', 'model s', 2016)
-tesla.battery.describe_battery()
-tesla.battery.get_range()
-
-tesla.battery.upgrade_battery()
-
-tesla.battery.describe_battery()
-tesla.battery.get_range()
