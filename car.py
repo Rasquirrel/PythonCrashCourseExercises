@@ -33,16 +33,28 @@ class Car:
         print('Filling the gas tank...')
 
 
-'''
-my_new_car = Car('audi', 'a4', 2016)
-print(my_new_car.get_descriptive_name())
-my_new_car.read_odometer()
+class Battery():
+    """A simple attempt to model a battery for an eletric car."""
 
-my_new_car.update_odometer(50)
-my_new_car.increment_odometer(100)
-my_new_car.read_odometer()
-'''
+    def __init__(self, battery_size=70):
+        """Initialize the battery's attributes."""
+        self.battery_size = battery_size
+    
+    def describe_battery(self):
+        """Print a statement describing the battery size."""
+        print("This car has a " + str(self.battery_size) + "-kWh battery.")
+    
+    def get_range(self):
+        """Print a statement about the range this battery provides."""
+        if self.battery_size == 70:
+            range = 240
+        elif self.battery_size == 85:
+            range = 270
+        message = "This car can go approximately " + str(range)
+        message += " miles on a full charge."
+        print(message)
 
+        
 
 class EletricCar(Car):
     """Trying to create a Eletric Car who is Car's child"""
@@ -53,11 +65,8 @@ class EletricCar(Car):
         Then initialize atributes specific to an eletric car.
         """
         super().__init__(make, model, year)
-        self.battery_size = 70
+        self.battery = Battery()
     
-    def describe_battery(self):
-        """Print a statement describing the battery size."""
-        print("This car has a " + str(self.battery_size) + "-kWh battery.")
     
     def fill_gas_tank(self):
         """Eletric cars doesn't have a gas tank!"""
@@ -66,5 +75,6 @@ class EletricCar(Car):
 
 tesla = EletricCar('tesla', 'model s', 2016)
 print(tesla.get_descriptive_name())
-print(tesla.describe_battery())
-print(tesla.fill_gas_tank())
+tesla.battery.describe_battery()
+tesla.fill_gas_tank()
+tesla.battery.get_range()
