@@ -1,0 +1,11 @@
+Com Python você pode mostrar coisas na tela;
+Com Python você pode realizar cálculos aritméticos;
+Com Python você pode criar listas, dicionários, sets e tuples;
+Com Python você pode criar aplicativos que recebem informações do usuário com o input;
+Com Python você pode ralizar tarefas repetitivas com for e com while:
+Com Python você pode manipular textos e números;
+Com Python você pode simular a criação de objetos do mundo real com classes;
+Com Python você pode facilitar sua vida!
+Com Python você pode criar restaurantes, jogos, empresas de turismo, programas de pesquisa;
+Com Python você pode manipular arquivos!
+Com Python você pode fazer muitas coisas. Eu gosto de aprender sobre o Python; :)
