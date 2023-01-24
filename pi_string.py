@@ -7,5 +7,9 @@ pi_string = ''
 for line in lines:
     pi_string += line.strip()
 
-print(pi_string[:52] + '...')
-print(len(pi_string))
+birthday = input('Enter your birthday in the format DDMMYYYY: ')
+
+if birthday in pi_string:
+    print('Your birthday is in the first million digits of pi! ')
+else:
+    print('Your birthday is not in the first million digits of pi.')
