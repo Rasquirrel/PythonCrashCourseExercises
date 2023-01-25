@@ -11,7 +11,8 @@ def print_content(filename):
             for line in lines:
                 print(line.rstrip())
     except FileNotFoundError:
-        print('\nThe file ' + filename + " doesn't exist!\n")
+        pass
+      # print('\nThe file ' + filename + " doesn't exist!\n")
 
 cats = 'cats.txt'
 dogs = 'dogs.txt'
