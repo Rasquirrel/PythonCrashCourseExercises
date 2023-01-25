@@ -5,7 +5,7 @@ print('Enter "quit" when you want to stop it.\n')
 while True:
     name = input('What is your name? ')
 
-    if name == 'quit': break
+    if name == 'q': break
 
     print('Welcome ' + name.title() + '!')
     print('Recording your visit...\n')
