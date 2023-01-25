@@ -1,15 +1,21 @@
+def count_words(filename):
+    """This function will count the approximate number of words in a file."""
+
+    try:
+        with open(filename) as f_obj:
+            contents = f_obj.read()
+
+    except FileNotFoundError:
+       pass 
+       # msg = 'Sorry! The file ' + filename + "doesn't exist!'"
+
+    else:
+        words = contents.split()
+        num_words = len(words)
+
+        print('The file ' + filename + ' has about ' + str(num_words) + ' words.')
+
+
 filename = 'alice.txt'
-
-try:
-    with open(filename) as f_obj:
-        contents = f_obj.read()
-
-except FileNotFoundError:
-    msg = 'Sorry! The file ' + filename + "doesn't exist!'"
-
-else:
-    words = contents.split()
-    num_words = len(words)
-
-    print('The file ' + filename + ' has about ' + str(num_words) + ' words.')
+count_words(filename)
 
