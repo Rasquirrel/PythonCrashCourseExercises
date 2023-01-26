@@ -1,11 +1,15 @@
 import json
 
-name = input('What is your name? ')
-
 file_name = 'username.json'
 
-with open(file_name, 'w') as f_obj:
-    json.dump(name, f_obj)
-
-print('We will remember you when you came back, ' + name.title())
+try:
+    with open(file_name) as f_obj:
+        name = json.load(f_obj)
+except FileNotFoundError:
+    name = input('What is your name? ')
+    with open(file_name, 'w') as f_obj:
+        json.dump(name, f_obj)
+        print('We will rember you when you came back ' + name.title())
+else:
+    print('Welcome back ' + name.title() + '!')
 
